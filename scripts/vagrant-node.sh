@@ -1,19 +1,7 @@
-# add apt repository for Postgres
-sudo add-apt-repository "deb https://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main"
-wget --quiet -O - https://postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-
-# update package list
-sudo apt-get update
-
-# install git and curl
-sudo apt-get install -y git-core curl
-
-# install postgres 9.4
-sudo apt-get install -y postgresql-9.4
-
+#!/bin/sh -e
 
 # install nvm
-curl -s https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
 # source .profile after nvm install to find nvm
 echo "source /home/vagrant/.nvm/nvm.sh" >> /home/vagrant/.profile
 source /home/vagrant/.profile
