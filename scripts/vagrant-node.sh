@@ -20,3 +20,6 @@ npm --version | grep -q -E '^1' &&  npm install -g npm@2
 # install app dependencies
 rm -rf node_modules/  # remove existing node modules
 npm install           # install new ones
+
+# Make locally installed node modules available from bash
+echo "export PATH=$(npm bin):$PATH" >> /home/vagrant/.profile
